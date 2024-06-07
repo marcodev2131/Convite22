@@ -1,3 +1,5 @@
+@use 'variables';
+
 .hero {
     padding-top: 64px;
     padding-bottom: 100px;
@@ -6,10 +8,13 @@
     background-size: cover;
     position: relative;
 
+    // Centraliza os elementos filhos horizontalmente usando Flexbox
     .container {
         position: relative;
+        display: flex;         // Define o container como um Flexbox
+        flex-direction: column;// Define a direção dos elementos filhos como coluna
+        align-items: center;   // Centraliza os elementos filhos horizontalmente
     }
-
 
     &::before {
         position: absolute;
@@ -17,7 +22,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #000;
+        background-color: variables.$secondaryTextColor;
         content: ' ';
         opacity: 0.7;
     }
@@ -32,12 +37,12 @@
     }
 
     &__logo {
-        margin: 0 auto;
-        margin: 80px;
+        margin: 0 auto; // Removendo a margem lateral para centralizar a imagem
+        margin: 80px 0; // Ajusta a margem vertical para manter o espaçamento
         display: block;
     }
 
-    @media (max-width:640px) {
+    @media (max-width: 640px) {
         padding: 40px 0;
 
         &__logo {
