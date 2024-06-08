@@ -15,7 +15,7 @@ const contaAsHoras = setInterval(function() {
 
     const diasAteOEvento = Math.floor(distanciaAteOEvento / diaEmMs);
     const horasAteOEvento = Math.floor((distanciaAteOEvento % diaEmMs) / horaEmMs);
-    const minutosAteOEvento = Math.floor((distanciaAteOEvento % diaEmMs) / minutoEmMs);
+    const minutosAteOEvento = Math.floor((distanciaAteOEvento % horaEmMs) / minutoEmMs);
     const segundosAteOEvento = Math.floor((distanciaAteOEvento % minutoEmMs) / 1000);
 
     console.log(diasAteOEvento + "d " + horasAteOEvento + "h " + minutosAteOEvento + "m " + segundosAteOEvento + "s ");
