@@ -5,6 +5,7 @@
     background-color: vars.$textColor; // Use o namespace 'vars'
     display: flex;
     justify-content: space-between;
+    align-items: center; // Centraliza verticalmente os elementos filhos
 
     &__infos {
         display: flex;
